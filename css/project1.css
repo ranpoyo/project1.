@@ -1,0 +1,266 @@
+/* -----------------------------------------
+   基礎設定與重置 (Reset & Base)
+----------------------------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f7f6;
+    color: #2c3e50;
+    line-height: 1.6;
+}
+
+/* -----------------------------------------
+   導覽列 (Navbar)
+----------------------------------------- */
+.navbar {
+    background-color: #2c3e50;
+    color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.logo {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-links a {
+    color: #ecf0f1;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #1abc9c;
+}
+
+/* -----------------------------------------
+   主佈局與 Grid 系統 (Main Container & Grid)
+----------------------------------------- */
+.main-container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    gap: 2rem;
+    align-items: start;
+}
+
+/* 側邊欄 (Sidebar) */
+.sidebar {
+    background: #ffffff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 5rem;
+}
+
+.sidebar h3 {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    color: #2c3e50;
+    border-bottom: 2px solid #1abc9c;
+    padding-bottom: 0.5rem;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar ul li {
+    margin-bottom: 0.8rem;
+}
+
+.sidebar ul li a {
+    color: #34495e;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.sidebar ul li a:hover {
+    color: #1abc9c;
+}
+
+.sidebar-box {
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid #eee;
+}
+
+.sidebar-box h4 {
+    font-size: 0.95rem;
+    color: #1abc9c;
+    margin-bottom: 0.3rem;
+}
+
+.sidebar-box p {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+/* 主內容 (Content Area) */
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* 卡片區塊 (Card) */
+.card {
+    background: #ffffff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.card h2 {
+    margin-bottom: 1rem;
+    color: #2c3e50;
+    font-size: 1.5rem;
+    border-left: 4px solid #1abc9c;
+    padding-left: 0.8rem;
+}
+
+.card p {
+    margin-bottom: 1rem;
+    color: #555;
+}
+
+/* Hero Banner 樣式 */
+.hero-card {
+    background: linear-gradient(135deg, #2c3e50, #1abc9c);
+    color: #ffffff;
+    text-align: center;
+    padding: 3rem 2rem;
+}
+
+.hero-card h2 {
+    border-left: none;
+    color: #ffffff;
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.slogan-text {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #f1c40f;
+    margin-bottom: 1rem;
+}
+
+.hero-card p {
+    color: #ecf0f1;
+}
+
+/* 標籤 (Badge) */
+.badge {
+    display: inline-block;
+    background-color: #1abc9c;
+    color: white;
+    padding: 0.2rem 0.6rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+/* 網格系統 (Grid Container inside card) */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.grid-container.two-cols {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.grid-item {
+    background: #f9fbfb;
+    border: 1px solid #e2e8e4;
+    padding: 1.5rem;
+    border-radius: 6px;
+    transition: transform 0.2s;
+}
+
+.grid-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.grid-item h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.8rem;
+    color: #2c3e50;
+}
+
+/* 分頁導覽 (Pagination) */
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.pagination a {
+    color: #2c3e50;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background: #fff;
+    transition: background 0.3s;
+}
+
+.pagination a.active, .pagination a:hover {
+    background-color: #1abc9c;
+    color: white;
+    border-color: #1abc9c;
+}
+
+/* 頁尾 (Footer) */
+footer {
+    text-align: center;
+    padding: 2rem;
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    margin-top: 3rem;
+    font-size: 0.9rem;
+}
+
+/* -----------------------------------------
+   RWD 響應式調整 (Media Queries)
+----------------------------------------- */
+@media (max-width: 768px) {
+    .main-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .sidebar {
+        position: static;
+    }
+
+    .nav-links {
+        display: none;
+    }
+}
